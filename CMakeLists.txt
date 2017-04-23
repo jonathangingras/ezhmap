@@ -9,7 +9,9 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c11")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")
 include_directories(include)
 
-include(ExternalProjectLocal.cmake)
+include(CMakeShortcuts/ExternalProjectLocal.cmake)
+include(CMakeShortcuts/CTestShortcuts.cmake)
+
 # murmur3
 ExternalProject_add_local(external-murmur3
   GIT_REPOSITORY "https://github.com/PeterScott/murmur3.git"
@@ -20,10 +22,5 @@ ExternalProject_add_local(external-sweetgreen
   GIT_REPOSITORY https://github.com/jonathangingras/sweetgreen.git
 )
 
-if(BUILD_TESTING)
-  include(CTest)
-  enable_testing()
-  add_subdirectory(test)
-endif()
-
 add_subdirectory(src)
+add_test_subdirectory(test)

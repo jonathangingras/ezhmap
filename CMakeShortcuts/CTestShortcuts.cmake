@@ -1,0 +1,15 @@
+if(BUILD_TESTING)
+  include(CTest)
+  enable_testing()
+endif()
+
+function(add_test_executable target)
+  add_executable(${ARGV})
+  add_test(${target} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${target})
+endfunction()
+
+function(add_test_subdirectory)
+  if(BUILD_TESTING)
+    add_subdirectory(${ARGV})
+  endif()
+endfunction()
