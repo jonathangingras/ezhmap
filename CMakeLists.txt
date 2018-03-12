@@ -22,5 +22,6 @@ ExternalProject_add_local(external-sweetgreen
   GIT_REPOSITORY https://github.com/jonathangingras/sweetgreen.git
 )
 
+add_subdirectory(include)
 add_subdirectory(src)
 add_test_subdirectory(test)
