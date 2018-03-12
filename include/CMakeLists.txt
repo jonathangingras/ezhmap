@@ -1,1 +1,1 @@
-install(FILE ezhmap/hash_table.h DESTINATION include/ezhmap)
+install(DIRECTORY ezhmap DESTINATION include/ezhmap)
