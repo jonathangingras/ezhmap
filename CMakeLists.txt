@@ -1,16 +1,12 @@
 project(ezhmap)
 cmake_minimum_required(VERSION 3.0)
 
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c11")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")
-include_directories(include)
-
 include(CMakeShortcuts/ExternalProjectLocal.cmake)
 include(CMakeShortcuts/CTestShortcuts.cmake)
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c11")
+
+include_directories(include)
 
 # murmur3
 ExternalProject_add_global(murmur3-target

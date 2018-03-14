@@ -1,4 +1,6 @@
-add_library(ezhmap hash_table.c)
+add_library(ezhmap
+  ../include/ezhmap/hash_table.h
+  hash_table.c)
 
 add_dependencies(ezhmap murmur3-target)
 
