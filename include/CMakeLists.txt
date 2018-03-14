@@ -1,1 +1,1 @@
-install(DIRECTORY ezhmap DESTINATION include/ezhmap)
+install(DIRECTORY ezhmap DESTINATION include)

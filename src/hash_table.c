@@ -1,5 +1,5 @@
 #include <string.h>
-#include <murmur3.h>
+#include <ezhmap/murmur3.h>
 #include "ezhmap/hash_table.h"
 
 
